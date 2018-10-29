@@ -9,7 +9,9 @@ All of the material here is released under the [Apache 2.0 license](./LICENSE.md
 
 ### Lab Setup
 
-Before starting with the labs, please make sure to follow the instructions documented in the folder *Setting up your Informatica Cloud Organization*.
+Before starting with the labs, please make sure to follow the instructions documented in the folder 
+
+* Setting up your Informatica Cloud Organization
 
 #### Apigee Community 
 If you have any questions/comments please visit https://community.apigee.com/index.html

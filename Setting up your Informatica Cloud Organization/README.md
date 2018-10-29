@@ -64,7 +64,7 @@ The steps below shows how to configure your IIC Org with the configuration neede
 
 6. In the steps below, you will import the *InitiateOrder* service workflow into your Trial IIC Org.
 
-* Go to apijam/Labs/Informatica/Resources on github.com and download the *Order_Initiation.zip* file
+* Go to *Resources* folder in the current folder and download the *Order_Initiation.zip* file
 * In *Application Integration*, click on the *Explore* folder icon in the left nav
 * Click on the green *Import* button at the top right
 * In the file dialog, click *Choose File*, and select the *Order_Initiation.zip* file
@@ -99,7 +99,7 @@ The steps below shows how to configure your IIC Org with the configuration neede
 
 10. We will also import the *FetchLeads* service workflow into your Trial IIC Org.
 
-* Go to apijam/Labs/Informatica/Resources on github.com and download the *Fetch_Leads.zip* file
+* Go to *Resources* folder in the current folder to download the *Fetch_Leads.zip* file
 * In *Application Integration*, click on the *Explore* folder icon in the left nav
 * Click on the green *Import* button at the top right
 * In the file dialog, click *Choose File*, and select the *Fetch_Leads.zip* file
