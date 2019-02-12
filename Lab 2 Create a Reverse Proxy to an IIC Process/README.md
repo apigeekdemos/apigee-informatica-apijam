@@ -18,7 +18,7 @@ In this lab, we will see how to create a reverse proxy, that routes inbound requ
 
 # Pre-requisites
 
-* Complete the steps outlined in *Setting up your Informatica Intelligent Cloud Services Organization*
+* Complete the steps outlined in [Setting up your Informatica Intelligent Cloud Services Organization](../Setting up your Informatica Intelligent Cloud Services Organization/README.md)
 * Login access to the Informatica Intelligent Cloud Services - Application Integration
 * *Order Initiation* process successully published to your IICS Org
 * Apigee Edge account and Organization provisioned on Apigee Cloud
