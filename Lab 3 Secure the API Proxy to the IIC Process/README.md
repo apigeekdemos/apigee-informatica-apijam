@@ -23,7 +23,7 @@ In this lab, we will see how to secure calls to a reverse proxy, retrieve and pa
 
 # Pre-requisites
 
-* Complete the steps outlined in [Setting up your Informatica Intelligent Cloud Services Organization](../Setting up your Informatica Intelligent Cloud Services Organization/README.md)
+* Complete the steps outlined in [Setting up your Informatica Intelligent Cloud Services Organization](../Setting%20up%20your%20Informatica%20Intelligent%20Cloud%20Services%20Organization/README.md)
 * Login access to the Informatica Intelligent Cloud Services - Application Integration console with Order Management processes provisioned.
 * Apigee Edge account and Organization provisioned on Apigee Cloud
 * [REST Client](https://apigee-rest-client.appspot.com/) on a browser window., or Postman

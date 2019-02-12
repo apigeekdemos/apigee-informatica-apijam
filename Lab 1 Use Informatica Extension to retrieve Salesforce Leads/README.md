@@ -19,9 +19,9 @@ In this lab, we will see how to create a reverse proxy, that routes inbound requ
 # Pre-requisites
 
 * Admin credentials to the Informatica Intelligent Cloud Services - Application Integration
-    * Please follow instructions documented in [Setting up your Informatica Intelligent Cloud Services Organization](../Setting up your Informatica Intelligent Cloud Services Organization/README.md)
+    * Please follow instructions documented in [Setting up your Informatica Intelligent Cloud Services Organization](../Setting%20up%20your%20Informatica%20Intelligent%20Cloud%20Services%20Organization/README.md)
 * Salesforce Developer Account with Application Integration package installed. (only needed for Lab 1)
-    * See instructions in [Setting up your Informatica Intelligent Cloud Services Organization] (../Setting up your Informatica Intelligent Cloud Services Organization/README.md)
+    * See instructions in [Setting up your Informatica Intelligent Cloud Services Organization](../Setting%20up%20your%20Informatica%20Intelligent%20Cloud%20Services%20Organization/README.md)
 * *FetchLeads* process successully published to your IICS Org
 * Apigee Edge account and Organization provisioned on Apigee Cloud with *Extensions* enabled
 * Org Admin credentials to the above Apigee Edge Organization
