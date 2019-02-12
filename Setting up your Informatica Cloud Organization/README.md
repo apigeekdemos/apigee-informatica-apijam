@@ -1,23 +1,23 @@
-# Setting up your Informatica Cloud Organization
+# Setting up your Informatica Intelligent Cloud Services Organization
 
 *Duration : 40 mins*
 
 *Persona : API Team*
 
-The set of steps below allows you to configure your own Informatica Cloud organization.
+The set of steps below allows you to configure your own Informatica Intelligent Cloud Services organization.
 
 # Pre-requisites
 
-* Admin credentials to the Informatica Integration Cloud - Application Integration
+* Admin credentials to the Informatica Intelligent Cloud Services - Application Integration
     * You can sign up for your own free trial account here: (https://www.informatica.com/trials/apigee.html#fbid=kCfMfR9hzHc)
     * Once registered, confirm your account by clicking on the link in the email you receive at the registered email address.
     * Enter password, security question, and click the *Log In* button. (*Note*: The log in button might be grayed out in the UI, but click anywhere in the box and it should get enabled)
     * Click *Continue* on the privacy dialog.
 
-* Salesforce account with credentials : username, password, security token. This is only needed for the FetchLeads IIC workflow. If you do not have a Salesforce account, you can sign up for one here: (https://developer.salesforce.com/signup?d=70130000000td6N).
+* Salesforce account with credentials : username, password, security token. This is only needed for the FetchLeads IICS process. If you do not have a Salesforce account, you can sign up for one here: (https://developer.salesforce.com/signup?d=70130000000td6N).
     * Click the link in the verification email to activate your account.
     * Enter a password and security question/answer
-    * Once logged into Salesforce, click the Setup (gear icon) on the top right to install the ICRT package
+    * Once logged into Salesforce, click the Setup (gear icon) on the top right to install the Application Integration package
         * In a separate browser tab navigate to the url:
         https://login.salesforce.com/packaging/installPackage.apexp?p0=04to0000000KEBS
         * On the page, select the *Install for all Users*, check the acknowledgement, and click *Install*
@@ -31,11 +31,11 @@ The set of steps below allows you to configure your own Informatica Cloud organi
 
 # Instructions
 
-## Configure IIC Org with Apigee Edge Connection
+## Configure IICS Org with Apigee Edge Connection
 
-The steps below shows how to configure your IIC Org with the configuration needed to push API proxies to your Apigee Edge Organization.
+The steps below shows how to configure your IICS Org with the configuration needed to push API proxies to your Apigee Edge Organization.
 
-1. Go to [https://dm-us.informaticacloud.com/identity-service/home](https://dm-us.informaticacloud.com/identity-service/home) and log in to the IIC UI using your IIC Trial Org credentials.
+1. Go to [https://dm-us.informaticacloud.com/identity-service/home](https://dm-us.informaticacloud.com/identity-service/home) and log in to the IICS UI using your IICS Trial Org credentials.
 
 2. Select **Application Integration** from the main page menu
 
@@ -60,19 +60,19 @@ The steps below shows how to configure your IIC Org with the configuration neede
 
 ![image alt text](./media/image_iic_ai_edit_apigee_connection.png)
 
-## Import the InitiateOrder IIC Service Workflow
+## Import the InitiateOrder process
 
-6. In the steps below, you will import the *InitiateOrder* service workflow into your Trial IIC Org.
+6. In the steps below, you will import the *InitiateOrder* process into your Trial IICS Org.
 
 * Go to *Resources* folder in the current folder and download the *Order_Initiation.zip* file
 * In *Application Integration*, click on the *Explore* folder icon in the left nav
 * Click on the green *Import* button at the top right
 * In the file dialog, click *Choose File*, and select the *Order_Initiation.zip* file
-* Click on the green Import button to start the import of this workflow alongwith all its dependencies
+* Click on the green Import button to start the import of this process along with all its dependencies
 
 ![image alt text](./media/image_iic_ai_import_order_initiation.png)
 
- Once the Import is completed, you should see 2 additional projects created with the dependent objects
+Once the Import is completed, you should see 2 additional projects created with the dependent objects
 
 ![image alt text](./media/image_iic_ai_order_initiate_project.png)
 
@@ -91,23 +91,23 @@ The steps below shows how to configure your IIC Org with the configuration neede
 
 ![image alt text](./media/image_iic_ai_initiate_order_connections.png)
 
-9. Edit the *Start* properties of the *Initiate Order* workflow to add your username to the *Allowed Users* field. Then, click *Save*, then *Publish* the workflow.
+9. Edit the *Start* properties of the *Initiate Order* process to add your username to the *Allowed Users* field. Then, click *Save*, then *Publish* the process.
 
 ![image alt text](./media/image_iic_ai_order_initiate_save_username.png)
 
-## Import the FetchLeads IIC Service Workflow
+## Import the FetchLeads IICS process
 
-10. We will also import the *FetchLeads* service workflow into your Trial IIC Org.
+10. We will also import the *FetchLeads* process into your Trial IICS Org.
 
 * Go to *Resources* folder in the current folder to download the *Fetch_Leads.zip* file
 * In *Application Integration*, click on the *Explore* folder icon in the left nav
 * Click on the green *Import* button at the top right
 * In the file dialog, click *Choose File*, and select the *Fetch_Leads.zip* file
-* Click on the green Import button to start the import of this workflow alongwith all its dependencies
+* Click on the green Import button to start the import of this process along with all its dependencies
 
 ![image alt text](./media/image_iic_ai_import_fetch_leads.png)
 
- Once the Import is completed, you should see a *Demo* project created with the *FetchLeads* process and dependent objects
+Once the Import is completed, you should see a *Demo* project created with the *FetchLeads* process and dependent objects
 
 ![image alt text](./media/image_iic_ai_fetch_leads_project.png)
 
@@ -122,24 +122,24 @@ The steps below shows how to configure your IIC Org with the configuration neede
 
 ![image alt text](./media/image_iic_ai_test_sfdc_connection.png)
 
-12. Publish and Test the *FetchLeads* workflow
+12. Publish and Test the *FetchLeads* process
 
-* Click on the *FetchLeads* process in the Demo project, then click the 3 dots to Publish the workflow.
+* Click on the *FetchLeads* process in the Demo project, then click the 3 dots to Publish the process.
 * From the same 3 dots menu, click on *Properties Detail*
-* Click on the *COPY* button to copy the service url endpoint to the FetchLeads service
+* Click on the *COPY* button to copy the service url endpoint to the FetchLeads process
 
 ![image alt text](./media/image_iic_ai_fetch_leads_service_url.png)
 
 * Paste the service url into a new browser tab and hit Enter
-* You should see the output of the workflow that contains a list of Leads retrieved from Salesforce
-* This verifies that the *FetchLeads* service is properly configured and operational in IIC
+* You should see the output of the process that contains a list of Leads retrieved from Salesforce
+* This verifies that the *FetchLeads* process is properly configured and operational in IICS
 
 ![image alt text](./media/image_iic_ai_fetch_leads_service_output.png)
 
 
 # Summary
 
-That completes the setup on Informatica Integration CLoud. You can now proceed with Lab 1 in this series.
+That completes the setup on Informatica Intelligent Cloud Services. You can now proceed with Lab 1 in this series.
 
 
 

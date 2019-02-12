@@ -1,4 +1,4 @@
-# API Design : Lab 1 - Create a Reverse Proxy to an Informatica Intelligent Cloud Workflow using Apigee Extensions
+# API Design : Lab 1 - Create a Reverse Proxy to an Informatica Intelligent Cloud Services process using Apigee Extensions
 
 *Duration : 20 mins*
 
@@ -10,19 +10,19 @@ You have a requirement to create a reverse proxy for taking requests from the In
 
 # How can Apigee Edge help?
 
-Apigee Edge enables you to quickly expose backend services or workflows as APIs. You do this by creating an API proxy that provides a facade for the backend service or workflow that you want to expose.
+Apigee Edge enables you to quickly expose backend services or processes as APIs. You do this by creating an API proxy that provides a facade for the backend service or processes that you want to expose.
 
 The API proxy decouples your backend service implementation from the API that developers consume. This shields developers from future changes to your backend services. As you update backend services, developers, insulated from those changes, can continue to call the API uninterrupted.
 
-In this lab, we will see how to create a reverse proxy, that routes inbound requests to an existing workflow running on Informatica Intelligent Cloud (IIC) that is exposed via an HTTP endpoint.
+In this lab, we will see how to create a reverse proxy, that routes inbound requests to an existing process running on Informatica Intelligent Cloud Services (IICS) that is exposed via an HTTP endpoint.
 
 # Pre-requisites
 
-* Admin credentials to the Informatica Integration Cloud - Application Integration
-    * Please follow instructions documented in *Setting up you Informatica Cloud Organization* (../Setting up yout Informatica Cloud Organization/README.md)
-* Salesforce Developer Account with ICRT package installed. (only needed for Lab 1)
-    * See instructions in *Setting up you Informatica Cloud Organization* (../Setting up yout Informatica Cloud Organization/README.md)
-* *FetchLeads* service workflow successully published to your IIC Cloud Org
+* Admin credentials to the Informatica Intelligent Cloud Services - Application Integration
+    * Please follow instructions documented in *Setting up your Informatica Intelligent Cloud Services Organization* (../Setting up your Informatica Intelligent Cloud Services Organization/README.md)
+* Salesforce Developer Account with Application Integration package installed. (only needed for Lab 1)
+    * See instructions in *Setting up your Informatica Intelligent Cloud Services Organization* (../Setting up your Informatica Intelligent Cloud Services Organization/README.md)
+* *FetchLeads* process successully published to your IICS Org
 * Apigee Edge account and Organization provisioned on Apigee Cloud with *Extensions* enabled
 * Org Admin credentials to the above Apigee Edge Organization
 * [REST Client](https://apigee-rest-client.appspot.com/) on a browser window., or Postman
@@ -30,11 +30,11 @@ In this lab, we will see how to create a reverse proxy, that routes inbound requ
 
 # Instructions
 
-## Review Informatica Integration Cloud - Application Integration - FetchLeads process workflow
+## Review Informatica Intelligent Cloud Services - Application Integration - FetchLeads process
 
-**NOTE:** This workflow is pre-created in the IIC Application Integration demo environment. The process uses a Salesforce account to fetch lead objects from Salesforce and returns them in JSON format. Since this workflow should already have been configured as part of the Setup instuctions (See Pre-requisites above, this step is a review to make sure it is available for execution in IIC. 
+**NOTE:** This process is pre-created in the IICS Application Integration demo environment. The process uses a Salesforce account to fetch lead objects from Salesforce and returns them in JSON format. Since this process should already have been configured as part of the Setup instuctions (See Pre-requisites above, this step is a review to make sure it is available for execution in IICS. 
 
-1. Go to [https://dm-us.informaticacloud.com/identity-service/home](https://dm-us.informaticacloud.com/identity-service/home) and log in to the IIC UI.
+1. Go to [https://dm-us.informaticacloud.com/identity-service/home](https://dm-us.informaticacloud.com/identity-service/home) and log in to the IICS UI.
 
 2. Select **Application Integration** from the main page menu
 
@@ -70,7 +70,7 @@ Enter a name and optional description for the Extension instance. Then, click Cr
 
 ![image alt text](./media/image_apigee_extensions_iic_config.png)
 
-11. Clicking the > will popup a dialog where you enter your IIC administrator username and password in JSON format. Please use your IIC cloud account login credentials. Then, click Save.
+11. Clicking the > will popup a dialog where you enter your IICS administrator username and password in JSON format. Please use your IICS credentials. Then, click Save.
 
 ![image alt text](./media/image_apigee_extensions_iic_config_creds.png)
 
@@ -120,7 +120,7 @@ Enter the Flow name, description, select *Path and Verb* option, enter values fo
 
 ![image alt text](./media/image_apigee_proxy_develop_getleads.png)
 
-19. Add the Extension Callout policy to the GET leads condition flow. In the policy popup, select the *sfLeadsExtension* instance previously created, then select the *FetchLeads* Action from the drop-down list. Apigee Edge automatically discovers all available workflows for this extension instance.
+19. Add the Extension Callout policy to the GET leads condition flow. In the policy popup, select the *sfLeadsExtension* instance previously created, then select the *FetchLeads* Action from the drop-down list. Apigee Edge automatically discovers all available processes for this extension instance.
 
 ![image alt text](./media/image_apigee_proxy_develop_ecpolicy.png)
 
@@ -136,7 +136,7 @@ Enter the Flow name, description, select *Path and Verb* option, enter values fo
 
 ![image alt text](./media/image_apigee_proxy_develop_ampolicy_edit.png)
 
-*Congratulations!* ...You have now built a reverse proxy for an existing backend service running on Informatica Integration Cloud.
+*Congratulations!* ...You have now built a reverse proxy for an existing backend service running on Informatica Intelligent Cloud Services.
 
 
 ## Test the API Proxy
@@ -157,7 +157,7 @@ We will use the [REST Client](https://apigee-rest-client.appspot.com/). Open the
 
 # Summary
 
-That completes this hands-on lesson. In this simple lab you learned how to create and deploy a passthru API proxy on Apigee Edge for an existing backend process from Informatica Integration CLoud.
+That completes this hands-on lesson. In this simple lab you learned how to create and deploy a passthru API proxy on Apigee Edge for an existing backend process from Informatica Intelligent Cloud Services.
 
 # References
 

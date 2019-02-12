@@ -1,4 +1,4 @@
-# API Design : Lab 3 - Secure the API Proxy to the IIC Workflow
+# API Design : Lab 3 - Secure the API Proxy to the IICS Process
 
 *Duration : 20 mins*
 
@@ -8,14 +8,14 @@
 
 In this lab, we will build on the API proxy that was created in Lab 2.
 
-In this Lab we will secure calls to the proxy via an API key. In the previous Lab 2, you had to pass in the IIC Org credentials which were passed thru to the IIC backend target. Since these are backend credentials, we will need to modify the proxy to implement to enhancements:
+In this Lab we will secure calls to the proxy via an API key. In the previous Lab 2, you had to pass in the IICS Org credentials which were passed thru to the IICS backend target. Since these are backend credentials, we will need to modify the proxy to implement a couple of enhancements:
 
-* Implement API key verification so that calling apps will need to pass in a valid apikey (instead of the IIC credentials)
-* Retrieve the IIC credentials from a Key-Value map at runtime, and pass those credentials to the backend IIC target
+* Implement API key verification so that calling apps will need to pass in a valid apikey (instead of the IICS credentials)
+* Retrieve the IICS credentials from a Key-Value map at runtime, and pass those credentials to the backend IICS target
 
 # How can Apigee Edge help?
 
-Apigee Edge enables you to quickly expose backend services or workflows as APIs. You do this by creating an API proxy that provides a facade for the backend service or workflow that you want to expose.
+Apigee Edge enables you to quickly expose backend services or processes as APIs. You do this by creating an API proxy that provides a facade for the backend service or process that you want to expose.
 
 The API proxy decouples your backend service implementation from the API that developers consume. This shields developers from future changes to your backend services. As you update backend services, developers, insulated from those changes, can continue to call the API uninterrupted.
 
@@ -23,19 +23,19 @@ In this lab, we will see how to secure calls to a reverse proxy, retrieve and pa
 
 # Pre-requisites
 
-* Complete the steps outlined in *Setting up your Informatica Cloud Organization*
-* Login access to the Informatica Integration Cloud - Application Integration console with Order Management workflows provisioned.
+* Complete the steps outlined in *Setting up your Informatica Intelligent Cloud Services Organization*
+* Login access to the Informatica Intelligent Cloud Services - Application Integration console with Order Management processes provisioned.
 * Apigee Edge account and Organization provisioned on Apigee Cloud
 * [REST Client](https://apigee-rest-client.appspot.com/) on a browser window., or Postman
 * Deployed *Orders* proxy (from Lab 2) in your Apigee Edge Org.
 
 # Instructions
 
-## Part I. API Proxy secures call to the IIC backend.
+## Part I. API Proxy secures call to the IICS backend.
 
-## Create a Key-Value Map to store IIC credentials in Apigee Edge
+## Create a Key-Value Map to store IICS credentials in Apigee Edge
 
-We will first create an encrypted KVM to store the IIC Org credentials. These credentials are needed by the IIC backend to be supplied as a BasicAuth header in the request to the Initiate_Order service workflow.
+We will first create an encrypted KVM to store the IICS Org credentials. These credentials are needed by the IICS backend to be supplied as a BasicAuth header in the request to the Initiate_Order process.
 
 1. Login to Apigee Edge at https://login.apigee.com using your Apigee Edge credentials.
 
@@ -48,12 +48,12 @@ We will first create an encrypted KVM to store the IIC Org credentials. These cr
 4. In the popup dialog, provide a name for the Key Value Map, and check the *Encrypted* box. Click the *Add* button. Once created, the KVM should show in the list of KVMs on this page.
 
 5. Click the arrow next to the KVM to expand and add two entries to this map. The 2 entries are:
-* key: iic_username, value: _your_IIC_login_username
-* key: iic_password, value: _your_IIC_login_password
+* key: iic_username, value: _your_IICS_login_username
+* key: iic_password, value: _your_IICS_login_password
 
 ![image alt text](./media/image_apigee_edit_kvm.png)
 
-## Modify the API proxy to authenticate against the IIC Target backend
+## Modify the API proxy to authenticate against the IICS Target backend
 
 6. Now, navigate to the Develop > API Proxies section in the Apigee Edge UI. Select the *Orders* proxy, and click on the *Develop* tab to edit the proxy. 
 * Select the Target Endpoints > default > PostFlow in the Navigator. 
@@ -90,7 +90,7 @@ We will use the [REST Client](https://apigee-rest-client.appspot.com/). Open the
 
 4. Paste the link into the REST Client to make a POST call. 
 As part of the request, you will need to supply the following information:
-*NOTE*: You no longer need to pass the IIC backend credentials to the proxy, since the proxy is using stored credentials and adding the basic auth header to the request at runtime.
+*NOTE*: You no longer need to pass the IICS backend credentials to the proxy, since the proxy is using stored credentials and adding the basic auth header to the request at runtime.
 
 Header:
 *Content-Type: application/json*
@@ -167,12 +167,10 @@ Click on *Send*.
 
 # Summary
 
-That completes this hands-on lesson. In this simple lab you learned how to create and deploy an API proxy on Apigee Edge for an existing backend process from Informatica Integration CLoud.
+That completes this hands-on lesson. In this simple lab you learned how to create and deploy an API proxy on Apigee Edge for an existing backend process from Informatica Intelligent Cloud Services.
 * You secured access to the API using an apikey
-* You secured the backend IIC target call using credentials retrieved from a secured storage location on Apigee Edge.
+* You secured the backend IICS target call using credentials retrieved from a secured storage location on Apigee Edge.
 
-# References
 
-TBD
 
 
