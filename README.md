@@ -11,7 +11,7 @@ All of the material here is released under the [Apache 2.0 license](./LICENSE.md
 
 Before starting with the labs, please make sure to follow the instructions documented in the folder 
 
-* Setting up your Informatica Intelligent Cloud Services Organization
+* [Setting up your Informatica Intelligent Cloud Services Organization](./Setting%20up%20your%20Informatica%20Intelligent%20Cloud%20Services%20Organization/README.md)
 
 #### Apigee Community 
 If you have any questions/comments please visit https://community.apigee.com/index.html
