@@ -64,7 +64,7 @@ The steps below shows how to configure your IICS Org with the configuration need
 
 6. In the steps below, you will import the *InitiateOrder* process into your Trial IICS Org.
 
-* On Github, go to *Resources* folder under the current folder and download the *Order_Initiation.zip* file
+* On Github, go to [Resources](./Resources) folder under the current folder and download the *Order_Initiation.zip* file
 * In *Application Integration*, click on the *Explore* folder icon in the left nav
 * Click on the green *Import* button at the top right
 * In the file dialog, click *Choose File*, and select the *Order_Initiation.zip* file
@@ -99,7 +99,7 @@ Once the Import is completed, you should see 2 additional projects created with 
 
 10. We will also import the *FetchLeads* process into your Trial IICS Org.
 
-* Go to *Resources* folder in the current folder to download the *Fetch_Leads.zip* file
+* On github, go to [Resources](./Resources) folder in the current folder to download the *Fetch_Leads.zip* file
 * In *Application Integration*, click on the *Explore* folder icon in the left nav
 * Click on the green *Import* button at the top right
 * In the file dialog, click *Choose File*, and select the *Fetch_Leads.zip* file
