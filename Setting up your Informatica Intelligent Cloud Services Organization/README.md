@@ -64,7 +64,7 @@ The steps below shows how to configure your IICS Org with the configuration need
 
 6. In the steps below, you will import the *InitiateOrder* process into your Trial IICS Org.
 
-* Go to *Resources* folder in the current folder and download the *Order_Initiation.zip* file
+* On Github, go to *Resources* folder under the current folder and download the *Order_Initiation.zip* file
 * In *Application Integration*, click on the *Explore* folder icon in the left nav
 * Click on the green *Import* button at the top right
 * In the file dialog, click *Choose File*, and select the *Order_Initiation.zip* file
