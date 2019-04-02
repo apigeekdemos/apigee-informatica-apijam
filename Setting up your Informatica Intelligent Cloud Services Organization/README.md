@@ -76,7 +76,7 @@ Once the Import is completed, you should see 2 additional projects created with 
 
 ![image alt text](./media/image_iic_ai_order_initiate_project.png)
 
-7. Publish the Service Connectors and Connections in the *Shared Services* project
+7. Publish the *Connections* in the *Shared Services* project
 * For the Email Service service connector, provide the password (GET from Instructor) and click Save, then Publish. Click the 3 dots to the right of the connector and click *Publish*
 * Repeat the same for the Email-Service connection
 * Finally Publish the *Send Email* process
