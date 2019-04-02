@@ -60,9 +60,9 @@ The steps below shows how to configure your IICS Org with the configuration need
 
 ![image alt text](./media/image_iic_ai_edit_apigee_connection.png)
 
-## Import the InitiateOrder process
+## Import the InitiateOrder project
 
-6. In the steps below, you will import the *InitiateOrder* process into your Trial IICS Org.
+6. In the steps below, you will import the *InitiateOrder* project into your Trial IICS Org.
 
 * On Github, go to [Resources](./Resources) folder under the current folder and download the *Order_Initiation.zip* file
 * In *Application Integration*, click on the *Explore* folder icon in the left nav
@@ -76,15 +76,31 @@ Once the Import is completed, you should see 2 additional projects created with 
 
 ![image alt text](./media/image_iic_ai_order_initiate_project.png)
 
-7. Publish the *Connections* in the *Shared Services* project
+## Import the SharedServices project
+
+7. In the steps below, you will import the *Shared Services* project into your Trial IICS Org.
+
+* On Github, go to [Resources](./Resources) folder under the current folder and download the *Shared Services-nnnn.zip* file
+* In *Application Integration*, click on the *Explore* folder icon in the left nav
+* Click on the green *Import* button at the top right
+* In the file dialog, click *Choose File*, and select the *Shared Services-nnnn.zip.zip* file
+* Click on the green Import button to start the import of this process along with all its dependencies
+
+## Publish the EmailService process
+
+8. Publish the *Connections* in the *Shared Services* project
+* Navigate to the *Shared Services* folder under *Explore -> All Projects*
 * Navigate to the *Connections* folder under *Shared Services*
-* Click on the *Email Service* connection
-* For the *Type* drop-down select *Email*
-* For the Email Service service connector, provide the password (GET from Instructor) and click Save, then Publish. Click the 3 dots to the right of the connector and click *Publish*
-* Repeat the same for the Email-Service connection
+* Click on the *Email Service* service connector
+* For the Email Service service connector, provide the password (GET from Instructor) and click Save, then Publish. 
+* Click the 3 dots to the right of the connector and click *Publish*
+* Naviagte back to the *Connections* folder and repeat the same for the Email-Service connection. Save, then Publish.
+* Naviaget back to the *Shared Services* folder, and click the *Send Email* process.
 * Finally Publish the *Send Email* process
 
-8. Publish the Service Connectors and Connections in the *Order Initiation* project
+## Publish the OrderInitiation process
+
+9. Publish the Service Connectors and Connections in the *Order Initiation* project
 * Click on *Order Initiation* project
 * Click on *Connections* folder
 * Publish the *Get Inventory Detail* Service Connector. Click the 3 dots to the right of the connector and click *Publish*
@@ -94,7 +110,7 @@ Once the Import is completed, you should see 2 additional projects created with 
 
 ![image alt text](./media/image_iic_ai_initiate_order_connections.png)
 
-9. Edit the *Start* properties of the *Initiate Order* process to add your username to the *Allowed Users* field. Then, click *Save*, then *Publish* the process.
+* Next, edit the *Start* properties of the *Initiate Order* process to add your username to the *Allowed Users* field. Then, click *Save*, then *Publish* the process.
 
 ![image alt text](./media/image_iic_ai_order_initiate_save_username.png)
 
