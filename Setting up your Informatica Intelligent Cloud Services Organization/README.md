@@ -89,7 +89,7 @@ Once the Import is completed, you should see 2 additional projects created with 
 ## Publish the EmailService process
 
 8. Publish the *Connections* in the *Shared Services* project
-* Navigate to the *Shared Services* folder under *Explore -> All Projects*
+* Navigate to the *Shared Services* folder under *Explore > All Projects*
 * Navigate to the *Connections* folder under *Shared Services*
 * Click on the *Email Service* service connector
 * For the Email Service service connector, provide the password (GET from Instructor) and click Save, then Publish. 
@@ -110,7 +110,9 @@ Once the Import is completed, you should see 2 additional projects created with 
 
 ![image alt text](./media/image_iic_ai_initiate_order_connections.png)
 
-* Next, edit the *Start* properties of the *Initiate Order* process to add your username to the *Allowed Users* field. Then, click *Save*, then *Publish* the process.
+* Navigate back to the *Order Initiation* project under *Explore > All Projects*
+* Click the *Initiate Order* process
+* Edit the *Start* properties of the *Initiate Order* process to add your username to the *Allowed Users* field. Then, click *Save*, then *Publish* the process.
 
 ![image alt text](./media/image_iic_ai_order_initiate_save_username.png)
 
